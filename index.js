@@ -100,7 +100,7 @@ function addSingleEmailToMChimp(email){
             url : 'https://us16.api.mailchimp.com/3.0/lists/c3427b7228/members',
             auth : {
                 user : 'any',
-                password : 'cfb07e58d28009835225600e3843d583-us16'
+                password : process.env.ADMIN_MAILCHIMP_PASSWORD
             },
             json : {'email_address': email, status: 'subscribed'},
         }, function (err, response) {
